@@ -4,7 +4,7 @@
 
 ## Branch Summary: `<branch-name>` → `<base-branch>`
 
-**<one-line description of what this branch does>**
+**<brief description of what this branch does>**
 
 **Type**: {change_type — inferred from commits/diffs; omit if unclear}
 **Why**: {reason — inferred from commits/diffs; omit if unclear}
