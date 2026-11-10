@@ -1,12 +1,12 @@
 ---
 name: typescript-best-practices
-description: TypeScript best practices — discriminated unions, branded types, boundary parsing, no `as` casts, exhaustiveness. Use when reading or editing any .ts or .tsx file.
+description: TypeScript best practices covering discriminated unions, branded types, boundary parsing, no `as` casts, exhaustiveness. Use when reading or editing any .ts or .tsx file.
 ---
 
 # TypeScript best practices
 
 The type checker is a proof assistant. Use it to eliminate impossible states, mismatched primitives,
-and unhandled variants at compile time — a case the types let you ignore becomes a runtime failure the
+and unhandled variants at compile time. A case the types let you ignore becomes a runtime failure the
 compiler could have stopped. The rules below ground that in TypeScript syntax.
 
 | Rule | Summary |
