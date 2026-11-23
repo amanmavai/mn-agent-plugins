@@ -23,10 +23,10 @@ set -euo pipefail
 # --- Configuration -----------------------------------------------------------
 # ${BASH_SOURCE[0]} — the path to this script file itself
 #  dirname "…" — strips the filename, leaving the directory containing the script
-ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"   # repo root (/Users/amanmavai/mn/repos/mn-skills)
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"   # repo root (/Users/amanmavai/mn/repos/mn-agent-plugins)
 VENDOR_DIR="$ROOT/vendor"                              # where vendored sources live
 DEFAULT_SUBDIR="skills"                                # upstream folder holding the skills
-DEFAULT_PLUGIN="mn-skills"                             # entry a newly vendored source joins
+DEFAULT_PLUGIN="mn"                                    # entry a newly vendored source joins
 
 # --- Helpers -----------------------------------------------------------------
 info()  { printf '\n\033[1;34m[INFO]\033[0m  %s\n' "$*"; }
@@ -81,7 +81,7 @@ vendor_one() {
 
   # mktemp keeps the working tree clean; the EXIT trap set above guarantees
   # cleanup even if a later step aborts under `set -e` or calls fail.
-  STAGE="$(mktemp -d "${TMPDIR:-/tmp}/mn-skills.XXXXXX")"
+  STAGE="$(mktemp -d "${TMPDIR:-/tmp}/mn-agent-plugins.XXXXXX")"
 
   info "Cloning $repo_url ..."
   git clone --depth 1 "$repo_url" "$STAGE" >/dev/null 2>&1 \

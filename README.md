@@ -1,4 +1,4 @@
-# mn-skills
+# mn-agent-plugins
 
 Source of truth for my agent skills, published as two Claude Code plugins from
 one marketplace. Skills live here grouped by origin (`mine/` and
@@ -15,12 +15,12 @@ directories that plugin scans:
 
 | Plugin | Scans | Skills | Always-on |
 |---|---|---|---|
-| `mn-skills` | `./mine/`, `./vendor/staltz/` | 8 | ~316 tok |
+| `mn` | `./mine/`, `./vendor/staltz/` | 8 | ~316 tok |
 | `chakra-ui` | `./vendor/chakra-ui/` | 3 | ~557 tok |
 
 Each listed directory is scanned a single level deep for `<skill>/SKILL.md`, so
 the grouping on disk is the grouping the plugins publish. Skills appear under
-their plugin's name: `/mn-skills:essence`, `/chakra-ui:chakra-ui-builder`.
+their plugin's name: `/mn:essence`, `/chakra-ui:chakra-ui-builder`.
 
 Both entries use `"source": "."` — the plugin *is* this repo. There is
 deliberately no `plugin.json`: with one present, each entry's `skills` would be
@@ -37,8 +37,8 @@ place*, so edits to any `SKILL.md` take effect at the next session start with
 nothing to publish:
 
 ```bash
-claude plugin marketplace add ~/mn/repos/mn-skills
-claude plugin install mn-skills@mn
+claude plugin marketplace add ~/mn/repos/mn-agent-plugins
+claude plugin install mn@mn
 claude plugin install chakra-ui@mn
 claude plugin disable chakra-ui
 ```
@@ -62,7 +62,7 @@ else.
 
 ```bash
 claude plugin validate .            # check the marketplace and every SKILL.md
-claude plugin details mn-skills     # list the skills and their token cost
+claude plugin details mn            # list the skills and their token cost
 claude plugin list                  # see what loaded, and any load errors
 ```
 
@@ -94,7 +94,7 @@ git diff afterward shows exactly what changed upstream.
 
 The `skills` lists are rewritten from what is on disk: a directory that no
 longer exists is dropped, and a newly vendored source joins `DEFAULT_PLUGIN`
-(`mn-skills`) so that it loads somewhere. Move its line to another entry, or
+(`mn`) so that it loads somewhere. Move its line to another entry, or
 add a new entry, if it deserves a plugin of its own. The script prints where
 every directory landed.
 

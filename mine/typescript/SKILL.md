@@ -1,5 +1,5 @@
 ---
-name: typescript-best-practices
+name: typescript
 description: TypeScript best practices covering discriminated unions, branded types, boundary parsing, no `as` casts, exhaustiveness. Use when reading or editing any .ts or .tsx file.
 ---
 
