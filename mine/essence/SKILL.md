@@ -11,7 +11,7 @@ Every line is a liability. Each one must **earn** its place.
 
 ## Guardrail
 
-Behavior stays identical. If a cut would change what the code does, stop and ask. That's a rewrite, not a simplification.
+Behavior stays identical. If a cut would change what the code does, stop and ask. That's a rewrite, not a simplification. To simplify by supporting fewer cases, use `narrow`.
 
 ## Workflow
 

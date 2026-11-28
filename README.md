@@ -15,7 +15,7 @@ directories that plugin scans:
 
 | Plugin | Scans | Skills | Always-on |
 |---|---|---|---|
-| `mn` | `./mine/`, `./vendor/staltz/` | 8 | ~316 tok |
+| `mn` | `./mine/`, `./vendor/staltz/` | 9 | ~380 tok |
 | `chakra-ui` | `./vendor/chakra-ui/` | 3 | ~557 tok |
 
 Each listed directory is scanned a single level deep for `<skill>/SKILL.md`, so
@@ -24,7 +24,7 @@ their plugin's name: `/mn:essence`, `/chakra-ui:chakra-ui-builder`.
 
 Both entries use `"source": "."` — the plugin *is* this repo. There is
 deliberately no `plugin.json`: with one present, each entry's `skills` would be
-appended to it and both plugins would load all 11 skills.
+appended to it and both plugins would load all 12 skills.
 
 `chakra-ui` is separate because it costs more always-on context than everything
 else combined, and only applies to Chakra projects — where `chakra-ui-builder`
