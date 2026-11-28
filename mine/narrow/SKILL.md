@@ -1,6 +1,6 @@
 ---
 name: narrow
-description: Simplify by supporting less. Find unused flexibility (options, env vars, fallbacks, modes), propose constraints that remove it, and apply the ones the user approves. Use when asked to simplify a design, script, API, config or process by adding constraints or cutting options. For behavior-preserving cleanup, use essence.
+description: Simplify by supporting less. Propose constraints that cut unused options, fallbacks and modes, then apply the approved ones. Use to cut flexibility from any code, config or process. For cleanup that keeps behavior, use essence.
 ---
 
 # Narrow

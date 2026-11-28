@@ -15,7 +15,7 @@ directories that plugin scans:
 
 | Plugin | Scans | Skills | Always-on |
 |---|---|---|---|
-| `mn` | `./mine/`, `./vendor/staltz/` | 9 | ~380 tok |
+| `mn` | `./mine/`, `./vendor/staltz/` | 9 | ~545 tok |
 | `chakra-ui` | `./vendor/chakra-ui/` | 3 | ~557 tok |
 
 Each listed directory is scanned a single level deep for `<skill>/SKILL.md`, so
